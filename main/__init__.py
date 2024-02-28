@@ -26,7 +26,10 @@ def create_app(config_class=Config):
     # Initialize migration engine with the Flask application and SQLAlchemy instance.
     migrate.init_app(flask_app, db)
 
+    from main.routes import bp
+    flask_app.register_blueprint(bp)
+
     return flask_app
 
 # Import modules at the bottom to avoid circular imports.
-from . import models
+from main import models
