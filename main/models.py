@@ -2,7 +2,7 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import Integer, String, Float
 
-from . import db
+from main import db
 
 class Anime(db.Model):
     __tablename__ = 'anime_model'
