@@ -13,10 +13,37 @@ The Anime API provides a platform for users to access information about various 
 
 ## Installation
 
-1. Clone the repository
-2. Install dependencies
-3. [Optional] Set up a virtual environment
-4. Configure environment variables
+1.**Clone the repository:**
+
+https://github.com/PythonShinobi/anime-api.git
+
+2.**Navigate to the project directory:**
+
+cd anime-api
+
+3.**Create and activate a virtual environment:**
+
+python -m venv venv
+
+source venv/bin/activate   # For Unix/Linux
+
+venv\Scripts\activate      # For Windows
+
+4.**Install dependencies:**
+
+pip install -r requirements.txt
+
+5.**Set up environment variables (if necessary).**
+
+6.Initialize and migrate the database:
+
+flask db upgrade
+
+7.**Run the application:**
+
+flask run
+
+8.**Access the application in your web browser at `http://localhost:5000`.**
 
 ## Configuration
 
@@ -29,7 +56,4 @@ To initialize the database using Flask-Migrate, follow these steps:
 1. Make sure you have Flask-Migrate installed (`pip install Flask-Migrate`).
 2. Set up your Flask application and SQLAlchemy models.
 3. Run the following commands:
-
-    flask db init  # Initialize the migrations directory (only needed once).
-       flask db migrate -m "Initial migration"# Create an initial migration.
-       flask db upgrade  # Apply the migration to the database.
+   flask db upgrade  # Apply the migration to the database.
